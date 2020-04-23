@@ -39,10 +39,6 @@ public class RNTextInputResetModule extends ReactContextBaseJavaModule {
               if (imm != null) {
                   View viewToReset = nativeViewHierarchyManager.resolveView(reactTagToReset);
                   imm.restartInput(viewToReset);
-                  try {
-                    TextView textView = (TextView) viewToReset;
-                    textView.setText("");
-                  } catch (Exception e) {}
               }
           }
       });
